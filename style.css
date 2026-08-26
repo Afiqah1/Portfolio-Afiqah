@@ -1,0 +1,436 @@
+/* =========================
+   ALL
+   ========================= */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom,#403a3e,#be5869);
+}
+
+
+/* =========================
+   SIDEBAR
+   ========================= */
+
+.sidebar
+{
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #FFB6C1;
+    padding: 30px 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo 
+{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.logo h2 
+{
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.logo p 
+{
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.sidebar-nav a
+ {
+    display: block;
+    padding: 15px 20px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 8px;
+    transition: 0.3s;
+    
+}
+
+/* Hover */
+.sidebar nav a:hover
+{
+    background-color: #eeeeee;
+}
+
+
+/* Current page */
+.sidebar nav a.active
+{
+    background-color: #333;
+    color: white;
+}
+
+.project-button.active
+{
+    background-color: #333;
+    color: white;
+}
+
+
+/* =========================
+   PROJECT DROPDOWN
+   ========================= */
+
+.project-button
+{
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    background: none;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+}
+.project-button a:hover
+{
+    background-color: #eeeeee;
+}
+
+.project-button span
+{
+    float: right;
+}
+
+
+
+.project-menu
+{
+    display: none;
+    padding-left: 20px;
+}
+
+.project-menu a
+{
+    display: block;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.project-menu a:hover
+{
+    background-color: #eeeeee;
+}
+
+/* Open dropdown */
+.project-dropdown.active .project-menu {
+    display: block;
+}
+
+
+/* =========================
+   MAIN CONTENT
+   ========================= */
+
+.content 
+{
+    margin-left: 250px;
+    min-height: 100vh; 
+    text-align: center;
+    color: #eeeeee;
+}
+
+.content h2
+{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.header {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0%;
+    width: 100%;
+    height: 60px;
+    background-color: #333;
+    color: #FFB6C1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-text
+{
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+    animation: slideIn 8s ease-out forwards;
+}
+
+@keyframes slideIn {
+
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.buttons
+{
+    margin-top: 30px;
+}
+
+.btn
+{
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 5px;
+    background-color:  #222;
+    color: #FFEB99;
+    font-size: 14px;
+    transition: 0.3s;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 6px;
+}
+
+.btn:hover {
+    background-color: #FFB6C1;
+    color: #222;
+    font-weight: bold;
+}
+
+.hover-text:hover
+{
+    color: #FFFF00;
+}
+
+.robot img
+{
+    float: right;
+    max-width: 22%;
+    margin-right: 7%;
+}
+
+.static
+{
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.about
+{
+    display: flex;
+    margin-left: 3%;
+    align-items: flex-start;
+    
+}
+
+.box 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    width: 300px;       
+    height: 450px;
+    padding: 2%;
+    margin: 10px;
+    background-color:  #222;
+    color: white;
+    font-size: 19px;
+    font-family: cursive;
+    margin-top: 100px;
+    border-radius: 3%; 
+    line-height: 1.5;       
+    letter-spacing: 1px;  
+    transition: all 0.3s ease;
+    border: 2px solid #FFB6C1;
+}
+
+.box:hover
+{
+    background: linear-gradient(to bottom, #000000, #880044);             
+    transform: scale(1.04);
+}
+
+.displaybox
+{
+    text-align: left;
+    height: auto;
+    width: 95%;       
+    padding: 16px;
+    padding-bottom: 70px;
+    margin: 10px;
+    margin-left: 3%;
+    background-color:  #222;
+    color: white;
+    font-size: 19px;
+    border-radius: 3%;
+    font-family: cursive;
+}
+
+.imgbox
+{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.subp
+{
+    display: flex;
+    text-align: center; 
+    color: black;
+    font-size: 19px;
+    font-family: cursive;
+    height: auto;
+    width: 45%;       
+    padding: 16px;
+    margin: 10px;
+    background-color: #FFB6C1;
+    border-radius: 20px;
+    flex-direction: column; 
+    align-items: flex-start;  
+    gap: 10px;   
+           
+}
+
+.subp:hover
+{           
+    transform: scale(1.10);
+    font-weight: bolder;
+}
+
+.imgbox img
+{
+    width: 100%;
+    height: 100%;
+    border: solid 2px black;  
+}
+
+.video-box
+{
+  margin-top: 10px;   
+  width: 100%;    
+  justify-content: flex-start;       
+  height: 400px;        
+  overflow: hidden;      
+}
+
+.video-box video
+{
+  width: 90%;
+  height: 90%;
+}
+
+.project-video
+{
+    cursor: pointer;
+}
+
+.caption
+{
+  bottom: 20px;
+  left: 30px;
+  color: white;
+  padding: 10px 15px;
+}
+
+.project-section
+{
+    margin-bottom: 100px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+
+.contact-section
+{
+    padding: 80px 10%;
+    min-height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-container
+{
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+/* Contact Cards */
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.contact-card 
+{
+    background-color: #FFB6C1;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.contact-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+
+.contact-card h3
+{
+    margin-bottom: 10px;
+    color: black;
+    font-weight: bold;
+}
+
+
+.contact-card p
+{
+    color: #00008B;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
