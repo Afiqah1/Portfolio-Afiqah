@@ -144,6 +144,7 @@ body
 
 .content 
 {
+    
     margin-left: 250px;
     min-height: 100vh; 
     text-align: center;
@@ -322,7 +323,7 @@ body
 .imgbox img
 {
     width: 100%;
-    height: 100%;
+    height: auto;
     border: solid 2px black;  
 }
 
@@ -421,7 +422,105 @@ body
     color: #00008B;
 }
 
+/* =========================
+   HAMBURGER MENU
+========================= */
 
+.menu-toggle {
+    display: none;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+
+        position: fixed;
+        top: 15px;
+        left: 15px;
+
+        z-index: 1001;
+
+        font-size: 25px;
+
+        border: none;
+        background: transparent;
+
+        cursor: pointer;
+    }
+
+
+    .sidebar {
+        position: fixed;
+
+        left: -260px;
+        top: 0;
+
+        width: 250px;
+        height: 100vh;
+
+        z-index: 1000;
+
+        transition: left 0.3s ease;
+    }
+
+
+    .sidebar.active {
+        left: 0;
+    }
+
+
+    main {
+        margin-left: 0;
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .project-tabs {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .project-tab {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .project-content {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+}
 
 
 

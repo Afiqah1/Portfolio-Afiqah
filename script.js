@@ -24,3 +24,24 @@ projectButton.addEventListener("click", function () {
 });
 
 
+
+const menuToggle = document.getElementById("menuToggle");
+const sidebar = document.querySelector(".sidebar");
+
+menuToggle.addEventListener("click", function() {
+    sidebar.classList.toggle("active");
+});
+
+
+const sidebarLinks = sidebar.querySelectorAll("a");
+
+sidebarLinks.forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        sidebar.classList.remove("active");
+
+    });
+
+});
+
