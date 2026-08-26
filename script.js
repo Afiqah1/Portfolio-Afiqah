@@ -27,21 +27,37 @@ projectButton.addEventListener("click", function () {
 
 const menuToggle = document.getElementById("menuToggle");
 const sidebar = document.querySelector(".sidebar");
+const content = document.querySelector(".content");
 
-menuToggle.addEventListener("click", function() {
-    sidebar.classList.toggle("active");
+
+// Set initial state
+if (window.innerWidth <= 768) {
+    sidebar.classList.add("closed");
+    content.classList.add("full-width");
+}
+
+
+// Hamburger button
+menuToggle.addEventListener("click", function () {
+
+    sidebar.classList.toggle("closed");
+    content.classList.toggle("full-width");
+
 });
 
 
+// Close sidebar after clicking a navigation link on mobile
 const sidebarLinks = sidebar.querySelectorAll("a");
 
-sidebarLinks.forEach(function(link) {
+sidebarLinks.forEach(function (link) {
 
-    link.addEventListener("click", function() {
+    link.addEventListener("click", function () {
 
-        sidebar.classList.remove("active");
+        if (window.innerWidth <= 768) {
+            sidebar.classList.add("closed");
+            content.classList.add("full-width");
+        }
 
     });
 
 });
-
