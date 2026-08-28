@@ -335,7 +335,6 @@ body
 .subp:hover
 {           
     transform: scale(1.10);
-    font-weight: bolder;
 }
 
 .imgbox img
